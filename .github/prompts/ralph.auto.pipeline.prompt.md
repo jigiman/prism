@@ -18,6 +18,34 @@ Your job is to:
 4. Converge safely
 5. Produce a clear merge recommendation
 
+## Pre-Step: Git Branch Creation (MANDATORY)
+
+Before creating any PRD documentation, perform the following steps:
+
+1. Determine the git branch prefix based on MODE:
+   - `NEW_FEATURE` → `feature/`
+   - `ENHANCEMENT` → `feature/`
+   - `CHANGE_REQUEST` → `feature/`
+   - `BUG_FIX` → `bug/`
+
+2. Construct the branch name using: `<prefix><JIRA-ID>-<short-kebab-case-name>`
+  Example: 
+    `feature/ABC-347-star-rating-system`
+    `bug/ABC-412-fix-null-pointer`
+
+3. Create and checkout the branch:
+- If the branch already exists, checkout the existing branch
+- Otherwise, create and checkout the new branch
+
+4. ONLY AFTER the correct branch is checked out:
+- Proceed with generating the PRD documentation
+- Create files in the specified `specs/` directory
+
+Rules:
+- Do NOT generate PRD documentation on `main`, `master`, or `develop`
+- Do NOT invent or modify the JIRA ticket ID
+- Do NOT proceed if branch creation or checkout fails
+
 ====================================================
 PHASE 0 — RISK ASSESSMENT (Internal)
 ====================================================

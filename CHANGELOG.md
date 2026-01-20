@@ -13,6 +13,43 @@ PRISM = Purpose-driven Requirements & Intelligent Software Method
 
 ---
 
+## [v1.2.0] – Branch Management & Workflow Enforcement
+
+### Added
+
+#### Git Branch Management
+- Mandatory git branch creation step added to PRD generation workflow
+- Branch naming convention enforcement: `<prefix><JIRA-ID>-<short-kebab-case-name>`
+- Automatic branch prefix selection based on MODE (feature/ or bug/)
+- Branch checkout validation before PRD documentation creation
+- Prevention of PRD creation on main/master/develop branches
+
+#### Agent Enhancements
+- **Developer Agent:** Added rules to prevent JIRA ticket ID invention or auto-increment
+- **TPO Agent:** Added rules to prevent JIRA ticket ID invention or auto-increment
+- **PR Reviewer Agent:** Added comprehensive PR gate for Branch ↔ JIRA ↔ Specs alignment
+  - Branch naming validation
+  - JIRA ID consistency checks
+  - Specs directory alignment verification
+  - Prompt ownership rules enforcement
+
+#### Prompt Updates
+- **prd.of.feature:** Added mandatory git branch creation pre-step
+- **prism.self-check:** Added git branch validation step
+- **ralph.auto.pipeline:** Added branch creation validation
+- **architecture-documentation-generator:** Simplified and clarified output location rules to enforce `docs/architecture/` only
+
+#### Workflow Governance
+- Enforced strict alignment between git branch, JIRA ticket ID, and specs directory
+- Added blocking PR gate for misaligned artifacts
+- Clarified prompt ownership (prd.of.feature creates, others reuse existing branches)
+
+### Changed
+- **architecture-documentation-generator:** Reduced complexity and enforced strict output location to `docs/architecture/` only
+- **prd.of.feature:** Updated output location documentation to include full JIRA ID prefix in directory naming
+
+---
+
 ## [v1.1.0] – Governance & Enforcement Hardening
 
 ### Added

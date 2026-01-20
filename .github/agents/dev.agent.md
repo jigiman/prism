@@ -103,6 +103,8 @@ Checklists:
   - A completed PRD
   - PRD lint result (PASS or accepted CONDITIONAL)
   - QA PRD review completed
+- Do NOT invent or guess a JIRA ticket ID
+- Do NOT auto-increment numbers
 - Treat the approved PRD as the source of truth
 - If it is not in the PRD, it is not a requirement
 - Make assumptions explicit

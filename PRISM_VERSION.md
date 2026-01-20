@@ -1,4 +1,4 @@
-PRISM v1.0.0
+PRISM v1.2.0
 
 Purpose-driven Requirements & Intelligent Software Method
 
@@ -8,11 +8,14 @@ This version defines:
 - Mandatory PRD lint and QA PRD review before implementation
 - Ralph auto pipeline for AI-assisted or risky changes
 - Template- and checklist-driven prompts
+- Git branch management and workflow enforcement
+- Branch ↔ JIRA ↔ Specs alignment gates
 
 Compatibility:
 - GitHub Copilot Chat (VS Code)
 - Prompt-based workflows
 - Role-based agent handoffs
+- Git-based branch management
 
 Stability:
 - Minor versions may add prompts, templates, or checklists

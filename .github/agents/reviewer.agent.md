@@ -40,6 +40,68 @@ Final approval remains human-owned.
 
 ---
 
+## PR Gate: Branch ↔ JIRA ↔ Specs Alignment (BLOCKING)
+
+This PR MUST satisfy all checks below.
+
+### 1. Branch Naming
+
+- Branch name MUST match: `^(feature|bug)/[A-Z]+-[0-9]+-.+`
+
+Examples:
+- `feature/ABC-347-star-rating-system`
+- `bug/ABC-412-fix-null-pointer`
+
+❌ Fail if:
+- Branch is `main`, `master`, or `develop`
+- Branch does not include a valid JIRA ID
+
+---
+
+### 2. JIRA Consistency
+
+- Extract JIRA ID from branch name (e.g., `ABC-347`)
+- PR description MUST reference the same JIRA ID
+- No additional or conflicting JIRA IDs allowed
+
+❌ Fail if:
+- JIRA ID is missing
+- JIRA IDs do not match exactly
+
+---
+
+### 3. Specs Directory Alignment
+
+- A specs directory MUST exist: `specs/<JIRA-ID>-<short-name>/`
+  Example: `specs/ABC-347-star-rating-system/`
+
+- Directory JIRA ID MUST match branch JIRA ID
+
+❌ Fail if:
+- Specs directory is missing
+- Multiple specs directories exist
+- JIRA ID in directory does not match branch
+
+---
+
+### 4. Prompt Ownership Rules
+
+- `prd.of.feature` → may CREATE branch + specs directory
+- `prism.self-check` → MUST reuse existing branch
+- `ralph.pipeline` → MUST reuse existing branch
+
+❌ Fail if:
+- Governance or pipeline artifacts appear without a PRD
+- Branch was created outside PRD step
+
+---
+
+### Final Verdict
+
+✅ PASS → PR may proceed  
+❌ FAIL → PR is BLOCKED until alignment is fixed
+
+
 ## What you do
 
 - Review code changes for correctness and risk

@@ -1,5 +1,5 @@
 ## Uses
-- Templates: templates/*
+- Templates: templates/prd.template
 - Checklists: checklists/*
 - Instructions: copilot-instructions (all)
 
@@ -9,10 +9,57 @@ MODE: ONE OF [NEW_FEATURE | ENHANCEMENT | CHANGE_REQUEST | BUG_FIX]
 
 INPUTS:
 
+- JIRA ticket ID (REQUIRED, e.g., ABC-123)
 - JIRA story title, description, and acceptance criteria (if any)
 - Additional context from conversation or comments
 
 You are a senior software engineer and product-minded architect.
+
+---
+
+## Pre-Step: Git Branch Creation (MANDATORY)
+
+Before creating any PRD documentation, perform the following steps:
+
+1. Determine the git branch prefix based on MODE:
+   - `NEW_FEATURE` → `feature/`
+   - `ENHANCEMENT` → `feature/`
+   - `CHANGE_REQUEST` → `feature/`
+   - `BUG_FIX` → `bug/`
+
+2. Construct the branch name using: `<prefix><JIRA-ID>-<short-kebab-case-name>`
+  Example: 
+    `feature/ABC-347-star-rating-system`
+    `bug/ABC-412-fix-null-pointer`
+
+3. Create and checkout the branch:
+- If the branch already exists, checkout the existing branch
+- Otherwise, create and checkout the new branch
+
+4. ONLY AFTER the correct branch is checked out:
+- Proceed with generating the PRD documentation
+- Create files in the specified `specs/` directory
+
+Rules:
+- Do NOT generate PRD documentation on `main`, `master`, or `develop`
+- Do NOT invent or modify the JIRA ticket ID
+- Do NOT proceed if branch creation or checkout fails
+
+
+## Output Location (STRICT)
+
+- The `NNN` value MUST be derived from the numeric portion of the JIRA ticket ID
+  - Example: ABC-347 → `347`
+- If no JIRA ticket ID is provided, STOP and request it
+- ALL generated documentation MUST be written under: `specs/<XXX-NNN-short-feature-name>/`
+  Example: `specs/ABC-347-star-rating-system/` where ABC is the prefix before number
+- Use **kebab-case** for the feature or change name
+- Exactly ONE feature/change directory must be used
+- Do NOT write files directly under `specs/`
+- Do NOT create files outside the feature/change directory
+
+---  
+
 
 Task:
 Create a lightweight PRD / design brief appropriate to the selected MODE
@@ -60,48 +107,6 @@ Rules:
 - Prefer explicit decisions over vague options
 - Optimize for engineering clarity, not marketing language
 - Do NOT write code
-
-Output format (adapt depth to MODE):
-
-## 1. Summary
-
-- Brief description of the work
-
-## 2. Current Behavior (Required for ENHANCEMENT / BUG_FIX)
-
-- What the system does today
-
-## 3. Desired Behavior
-
-- What should change or be added
-
-## 4. Goals
-
-- What success looks like
-
-## 5. Non-Goals
-
-- Explicitly out of scope
-
-## 6. Functional Requirements
-
-- Concrete, testable behaviors
-
-## 7. Non-Functional Requirements
-
-- Performance, reliability, security, compliance (if applicable)
-
-## 8. Assumptions & Constraints
-
-- Technical, business, or product constraints
-
-## 9. Failure Modes & Edge Cases
-
-- Known risks, regressions, degraded behavior
-
-## 10. Open Questions
-
-- Decisions needed before implementation
 
 ## JIRA Coverage & Gaps
 

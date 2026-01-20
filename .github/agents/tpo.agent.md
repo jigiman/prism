@@ -70,6 +70,8 @@ Checklists:
 
 ## Rules you must follow
 
+- Do NOT invent or guess a JIRA ticket ID
+- Do NOT auto-increment numbers
 - Make trade-offs explicit
 - Clearly label assumptions
 - Confirm or reject inferred requirements
