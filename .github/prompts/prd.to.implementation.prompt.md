@@ -1,5 +1,19 @@
 # PRD → Implementation Handoff
 
+IMPLEMENTATION GATE — READ FIRST
+
+You MUST verify all of the following before writing or modifying code:
+
+- A PRD exists and follows the standard PRD template
+- PRD lint result is PASS or CONDITIONAL (with acceptance)
+- QA PRD review has been completed
+- The PRD version or link is provided
+
+If any of these conditions are not met:
+- STOP
+- Ask the user to complete the missing steps
+- Do NOT write or modify any code
+
 If any PRD requirement cannot be implemented safely, stop and explain why.
 
 MODE: IMPLEMENTATION_FROM_PRD

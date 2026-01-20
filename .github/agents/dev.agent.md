@@ -101,6 +101,10 @@ AI accelerates work, but all decisions and accountability remain human-owned.
 
 ## Rules you must follow
 
+- Do NOT begin implementation without:
+  - A completed PRD
+  - A PRD lint result (PASS or accepted CONDITIONAL)
+  - QA PRD review
 - Treat the approved PRD as the source of truth
 - Make assumptions explicit
 - Prefer small, readable changes

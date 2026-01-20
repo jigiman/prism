@@ -6,19 +6,34 @@ This guide describes the **canonical SDLC flow** using AI agents and prompts.
 
 ## Step 1 — PRD Creation
 
-Owner: TPO (or Dev with TPO confirmation)
+Owner: TPO or Developer (with TPO confirmation)
 
 Prompts:
 - user-story-analyzer
 - prd.of.feature
 
 Outcome:
-- Clear goals, non-goals, acceptance criteria
-- Explicit assumptions and constraints
+- PRD created using the standard PRD template
 
 ---
+## Step 2 — PRD Lint (Quality Gate)
 
-## Step 2 — QA PRD Review (Pre-Implementation)
+Owner: TPO or Developer
+
+Prompt:
+- prd.lint
+
+Purpose:
+- Validate PRD structure, clarity, and testability
+- Catch missing sections and ambiguous requirements early
+
+Rules:
+- If result is FAIL → PRD must be updated
+- If result is CONDITIONAL → issues must be reviewed and accepted
+- If result is PASS → proceed to QA PRD review
+
+
+## Step 3 — QA PRD Review (Pre-Implementation)
 
 Owner: QA
 
@@ -26,13 +41,13 @@ Prompt:
 - qa.prd.review
 
 Outcome:
-- Testable requirements
-- Identified gaps and ambiguity
-- PRD updated before coding starts
+- Testable, unambiguous PRD
+- Gaps resolved before coding begins
+
 
 ---
 
-## Step 3 — Implementation
+## Step 4 — Implementation
 
 Owner: Developer
 
@@ -46,7 +61,7 @@ Rules:
 
 ---
 
-## Step 4 — Ralph Context Review
+## Step 5 — Ralph Context Review
 
 Owner: Developer
 
@@ -60,7 +75,7 @@ Outcome:
 
 ---
 
-## Step 5 — Ralph Auto Pipeline
+## Step 6 — Ralph Auto Pipeline
 
 Owner: Developer
 
@@ -79,7 +94,7 @@ Outcome:
 
 ---
 
-## Step 6 — QA Validation (Post-Implementation)
+## Step 7 — QA Validation (Post-Implementation)
 
 Owner: QA
 
@@ -94,7 +109,7 @@ Outcome:
 
 ---
 
-## Step 7 — PR Review
+## Step 8 — PR Review
 
 Owner: PR Reviewer
 
@@ -108,7 +123,7 @@ Outcome:
 
 ---
 
-## Step 8 — Human Merge Decision
+## Step 9 — Human Merge Decision
 
 Owner: Human Reviewer
 
