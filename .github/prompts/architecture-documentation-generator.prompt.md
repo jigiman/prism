@@ -1,3 +1,8 @@
+## Uses
+- Templates: templates/*
+- Checklists: checklists/*
+- Instructions: copilot-instructions (all)
+
 # Architecture Generator Prompt
 
 > **Estimated Time:** 5-15 minutes depending on project size  
@@ -667,3 +672,9 @@ To add new documentation types:
 2. Create new Task with template
 3. Add to index in Task 7
 4. Add validation rules in Task 8
+
+
+## REQUIRED ARTIFACTS
+- Use appropriate template from /templates
+- Validate output using relevant checklist
+- Follow copilot-instructions rules

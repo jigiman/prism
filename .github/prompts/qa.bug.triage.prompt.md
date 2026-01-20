@@ -1,3 +1,8 @@
+## Uses
+- Templates: templates/*
+- Checklists: checklists/*
+- Instructions: copilot-instructions (all)
+
 # QA Bug Reproduction & Triage
 
 You are assisting QA with bug triage.
@@ -28,3 +33,9 @@ Output format:
 ## Suspected Areas
 
 ## Diagnostics to Capture
+
+
+## REQUIRED ARTIFACTS
+- Use appropriate template from /templates
+- Validate output using relevant checklist
+- Follow copilot-instructions rules

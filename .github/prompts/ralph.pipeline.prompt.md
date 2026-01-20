@@ -1,3 +1,8 @@
+## Uses
+- Template: templates/ralph.review.output.template.md
+- Checklist: checklists/pr-review-checklist.md
+- Instructions: copilot-instructions (all)
+
 DEPRECATED — use ralph.auto.pipeline
 
 # Run Ralph Pipeline
@@ -159,3 +164,9 @@ Output:
 
 Explicitly answer:
 “Is this code safe to merge given its context and constraints?”
+
+
+## REQUIRED ARTIFACTS
+- Use appropriate template from /templates
+- Validate output using relevant checklist
+- Follow copilot-instructions rules

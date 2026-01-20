@@ -1,3 +1,8 @@
+## Uses
+- Templates: templates/*
+- Checklists: checklists/*
+- Instructions: copilot-instructions (all)
+
 # Feature / Change PRD Generation
 
 MODE: ONE OF [NEW_FEATURE | ENHANCEMENT | CHANGE_REQUEST | BUG_FIX]
@@ -110,3 +115,9 @@ Notes:
 - Keep the document lightweight
 - Sections may be brief for BUG_FIX or small changes
 - This PRD will guide implementation and Ralph review
+
+
+## REQUIRED ARTIFACTS
+- Use appropriate template from /templates
+- Validate output using relevant checklist
+- Follow copilot-instructions rules

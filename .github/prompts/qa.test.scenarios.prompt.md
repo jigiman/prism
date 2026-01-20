@@ -1,3 +1,8 @@
+## Uses
+- Template: templates/qa.test.scenario.template.md
+- Checklist: checklists/qa-prd-review-checklist.md
+- Instructions: copilot-instructions (all)
+
 # QA Test Scenario Generation
 
 You are a QA engineer designing test scenarios.
@@ -33,3 +38,9 @@ Output format:
 ## Edge & Boundary Cases
 
 ## Regression Risk Areas
+
+
+## REQUIRED ARTIFACTS
+- Use appropriate template from /templates
+- Validate output using relevant checklist
+- Follow copilot-instructions rules

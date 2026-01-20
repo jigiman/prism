@@ -1,3 +1,8 @@
+## Uses
+- Template: templates/ralph.review.output.template.md
+- Checklist: checklists/pr-review-checklist.md
+- Instructions: copilot-instructions (all)
+
 # Ralph Auto Pipeline — Unified Review & Safety Gate
 
 MODE: PIPELINE (AUTO)
@@ -179,3 +184,9 @@ IMPORTANT RULES
 - AI recommendations are advisory, not authoritative
 
 END RALPH AUTO PIPELINE
+
+
+## REQUIRED ARTIFACTS
+- Use appropriate template from /templates
+- Validate output using relevant checklist
+- Follow copilot-instructions rules

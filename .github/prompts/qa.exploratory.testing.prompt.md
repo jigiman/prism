@@ -1,3 +1,8 @@
+## Uses
+- Templates: templates/*
+- Checklists: checklists/*
+- Instructions: copilot-instructions (all)
+
 # QA Exploratory Testing Guide
 
 You are assisting a QA engineer during exploratory testing.
@@ -25,3 +30,9 @@ Output format:
 ## High-Risk Areas
 
 ## “Try to Break It” Ideas
+
+
+## REQUIRED ARTIFACTS
+- Use appropriate template from /templates
+- Validate output using relevant checklist
+- Follow copilot-instructions rules

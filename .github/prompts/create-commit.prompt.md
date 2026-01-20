@@ -1,3 +1,8 @@
+## Uses
+- Templates: templates/*
+- Checklists: checklists/*
+- Instructions: copilot-instructions (all)
+
 # Generate Git Commit Message from Staged Changes
 
 You are acting as a senior software engineer preparing a high-quality Git commit.
@@ -48,3 +53,9 @@ NOTE FOR PR REVIEWER
 - Prefer clarity over clever wording
 - Do not include markdown beyond bullets and headings
 - Do not mention unstaged changes
+
+
+## REQUIRED ARTIFACTS
+- Use appropriate template from /templates
+- Validate output using relevant checklist
+- Follow copilot-instructions rules

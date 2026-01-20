@@ -1,3 +1,8 @@
+## Uses
+- Templates: templates/*
+- Checklists: checklists/*
+- Instructions: copilot-instructions (all)
+
 You are updating an existing `copilot-instructions.md` file.
 
 CRITICAL PRESERVATION RULES:
@@ -61,3 +66,9 @@ OUTPUT RULE:
 - Ensure that:
   - Everything above `## 4. Stack Overview` is byte-for-byte identical
   - Sections `## 9. Guiding Rule` and `## 10. Final Note` are byte-for-byte identical
+
+
+## REQUIRED ARTIFACTS
+- Use appropriate template from /templates
+- Validate output using relevant checklist
+- Follow copilot-instructions rules

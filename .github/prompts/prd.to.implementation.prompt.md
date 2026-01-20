@@ -1,3 +1,8 @@
+## Uses
+- Templates: templates/*
+- Checklists: checklists/*
+- Instructions: copilot-instructions (all)
+
 # PRD → Implementation Handoff
 
 IMPLEMENTATION GATE — READ FIRST
@@ -82,3 +87,9 @@ FINAL NOTE:
 This implementation will be reviewed using Ralph
 (Greenfield or Brownfield, followed by Ralph Pipeline).
 Optimize for correctness and reviewability.
+
+
+## REQUIRED ARTIFACTS
+- Use appropriate template from /templates
+- Validate output using relevant checklist
+- Follow copilot-instructions rules

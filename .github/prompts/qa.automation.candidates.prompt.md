@@ -1,3 +1,8 @@
+## Uses
+- Templates: templates/*
+- Checklists: checklists/*
+- Instructions: copilot-instructions (all)
+
 # QA Automation Candidate Identification
 
 You are a QA engineer deciding what to automate.
@@ -27,3 +32,9 @@ Output format:
 ## Manual-Only Tests
 
 ## Rationale
+
+
+## REQUIRED ARTIFACTS
+- Use appropriate template from /templates
+- Validate output using relevant checklist
+- Follow copilot-instructions rules
