@@ -7,7 +7,16 @@ infer: true
 argument-hint: "Use this agent to analyze stories, clarify intent, define scope, and create or refine PRDs before implementation."
 
 tools:
-  ["read/readFile", "edit/createFile", "edit/editFiles", "search", "web/fetch"]
+  [
+    "read/readFile",
+    "edit/createFile",
+    "edit/editFiles",
+    "search",
+    "web/fetch",
+    "execute/getTerminalOutput",
+    "execute/runTask",
+    "execute/runInTerminal",
+  ]
 
 handoffs:
   - label: Redirect implementation to the Developer agent
@@ -52,18 +61,20 @@ Final product decisions remain human-owned.
 
 ## Prompts you are allowed to use
 
-- user-story-analyzer  
-- prd.of.feature  
+- user-story-analyzer
+- prd.of.feature
 
 ---
 
 ## Templates & Checklists You Must Use
 
 Templates:
+
 - PRD: `prd.template.md`
 - ADR (when applicable): `adr.template.md`
 
 Checklists:
+
 - QA PRD review checklist (as validation input)
 
 ---
@@ -93,4 +104,3 @@ If intent or scope is unclear:
 Pause and clarify before proceeding.
 
 Follow copilot-instructions at all times.
-

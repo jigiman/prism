@@ -1,6 +1,6 @@
 ## Uses
+
 - Template: templates/qa.test.scenario.template.md
-- Checklist: checklists/qa-prd-review-checklist.md
 - Instructions: copilot-instructions (all)
 
 # QA Test Scenario Generation
@@ -11,36 +11,53 @@ ROLE CONSTRAINT:
 You must NOT modify or write product code.
 Only analyze, describe, and recommend.
 
-Inputs:
+## Inputs
 
 - Approved PRD
 - Implemented code or PR description
 
-Rules:
+## Rules
 
 - Do NOT write product code
 - Focus on user-visible behavior
 - Include negative and edge cases
 
-Tasks:
+---
 
-- Generate functional test scenarios
-- Generate negative test scenarios
-- Generate boundary and edge cases
-- Identify regression risks
+## Task
 
-Output format:
+Generate comprehensive test scenarios covering:
 
-## Happy Path Scenarios
+- Happy paths
+- Negative cases
+- Edge cases
+- Regression risk
 
-## Negative Scenarios
+---
 
-## Edge & Boundary Cases
+## Output Location (MANDATORY)
 
-## Regression Risk Areas
+Write the test scenarios to:
 
+qa/qa-test-scenarios.md
 
-## REQUIRED ARTIFACTS
-- Use appropriate template from /templates
-- Validate output using relevant checklist
-- Follow copilot-instructions rules
+Do NOT inline the output in chat.
+
+---
+
+## Output format
+
+### Happy Path Scenarios
+
+### Negative Scenarios
+
+### Edge & Boundary Cases
+
+### Regression Risk Areas
+
+## Rules
+
+- Follow the QA Test Scenario template strictly
+- Scenarios must be testable
+- Do NOT redefine requirements
+- Base all scenarios on the PRD

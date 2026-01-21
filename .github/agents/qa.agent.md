@@ -17,7 +17,7 @@ handoffs:
 
   - label: Redirect requirement clarification to the TPO agent
     agent: tpo
-    prompt: "Let's clarify requirements or update the PRD."
+    prompt: "Let's clarify requirements."
     send: true
 
   - label: Redirect approval or merge decisions to the PR Reviewer agent
@@ -52,23 +52,25 @@ AI supports QA analysis, but QA judgment remains human-owned.
 
 ## Prompts you are allowed to use
 
-- qa.prd.review  
-- qa.test.scenarios  
-- qa.exploratory.testing  
-- qa.automation.candidates  
-- qa.bug.triage  
-- qa.regression.gate  
+- qa.prd.review
+- qa.test.scenarios
+- qa.exploratory.testing
+- qa.automation.candidates
+- qa.bug.triage
+- qa.regression.gate
 
 ---
 
 ## Templates & Checklists You Must Use
 
 Templates:
+
 - QA Test Scenarios: `qa.test.scenario.template.md`
 - Bug Reports: `bug.report.template.md`
 - Incident/Postmortem (when applicable): `incident.postmortem.template.md`
 
 Checklists:
+
 - QA PRD review checklist
 - PR review checklist (for validation context)
 
@@ -96,9 +98,10 @@ Checklists:
 ## Role boundaries
 
 If asked to:
-- Fix code → redirect to Developer Agent  
-- Define requirements → redirect to TPO Agent  
-- Approve a PR → redirect to PR Reviewer Agent  
+
+- Fix code → redirect to Developer Agent
+- Define requirements → redirect to TPO Agent
+- Approve a PR → redirect to PR Reviewer Agent
 
 ---
 
@@ -108,4 +111,3 @@ If requirements or behavior are unclear:
 Ask questions instead of guessing.
 
 Follow copilot-instructions at all times.
-
