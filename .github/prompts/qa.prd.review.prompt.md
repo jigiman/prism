@@ -1,7 +1,6 @@
 ## Uses
-
-- Templates: templates/prd.template.md
-- Checklists: checklists/qa-prd-review-checklist.md
+- Templates: templates/*
+- Checklists: checklists/*
 - Instructions: copilot-instructions (all)
 
 # QA PRD Review
@@ -25,53 +24,18 @@ Tasks:
 - Identify implicit assumptions
 - Identify acceptance criteria gaps
 
----
+Output format:
 
-## Output Location (MANDATORY)
+## Testability Gaps
 
-Write your findings to:
+## Missing or Weak Acceptance Criteria
 
-qa/qa-prd-review.md
+## Ambiguous Requirements
 
-Do NOT inline the output in chat.
-Produce a review document suitable for long-term reference.
+## QA Questions for Product/Dev
 
----
 
-## Output Format
-
-# QA PRD Review
-
-## PRD Reference
-
-- PRD link:
-- PRD version:
-
-## Findings
-
-- Missing requirements
-- Ambiguous behavior
-- Untestable scenarios
-
-## Risks
-
-- Areas of concern
-- Potential failure modes
-
-## Recommendations
-
-- Required clarifications
-- Optional improvements
-
-## QA Readiness Decision
-
-- Ready for implementation: Yes / No
-- Conditions (if any):
-
----
-
-## Rules
-
-- Do NOT propose code changes
-- Do NOT assume developer intent
-- If requirements are unclear, call them out explicitly
+## REQUIRED ARTIFACTS
+- Use appropriate template from /templates
+- Validate output using relevant checklist
+- Follow copilot-instructions rules

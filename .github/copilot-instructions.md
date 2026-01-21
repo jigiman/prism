@@ -146,20 +146,6 @@ AI MUST NOT:
 
 ---
 
-## File Creation Policy
-
-AI may only create or modify files when:
-
-- The user explicitly names the file path
-- The prompt explicitly authorizes file creation
-
-AI must never invent filenames or directories.
-
-## Terminology Clarification
-
-- "Review", "analyze", "validate", or "assess"
-  do NOT imply file creation
-- File creation happens ONLY when "Output Location" is specified
 
 ---
 
