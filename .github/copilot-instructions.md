@@ -10,6 +10,35 @@ It is the **AI operating manual** for Developers, QA Engineers, and Reviewers.
 > AI accelerates work, but **human judgment is always the final gate**.
 > All code reviews use ralph.auto.pipeline. Fast/deep pipelines are internal behaviors, not user choices.
 
+## ⛔ Default Behavior Override (MANDATORY)
+
+When responding to any user request:
+
+- You MUST NOT write implementation code by default.
+- You MUST NOT create or modify files unless explicitly instructed.
+- You MUST assume the user is in a discovery, design, or validation phase.
+
+Implementation is ONLY allowed when the user explicitly uses one of the following phrases:
+
+- "implement"
+- "write the code"
+- "generate code"
+- "create the implementation"
+- "apply changes"
+- "make the changes"
+
+If none of these phrases appear, you MUST stop before implementation.
+
+## 🧠 Mandatory Planning Step Before Implementation
+
+If a request could reasonably lead to implementation, you MUST:
+
+1. Summarize your understanding of the request
+2. Propose a high-level plan or approach
+3. Ask for explicit confirmation to proceed
+
+You MUST NOT proceed to implementation until the user explicitly confirms.
+
 ---
 
 ## 1. Global AI Principles (Ralph Mode)
@@ -146,6 +175,71 @@ AI MUST NOT:
 
 ---
 
+---
+
+## 🔒 Documentation Output Guardrails (MANDATORY)
+
+You MUST strictly follow these rules when executing any prompt in the `/prompts` directory.
+
+---
+
+### Explicit Output Ownership
+
+- Only prompts whose primary purpose is documentation generation are allowed to create files.
+- Prompts that perform linting, validation, review, reasoning, or gating MUST NOT create, modify, or suggest creating any files.
+
+---
+
+### Single-File Output Rule
+
+For prompts that are allowed to generate documentation:
+
+- You MUST generate exactly ONE (1) Markdown file.
+- The file:
+  - MUST be the explicitly defined output of that prompt
+  - MUST use the expected filename
+  - MUST be written to the expected directory
+- You MUST NOT generate:
+  - Additional Markdown files
+  - Supporting files
+  - Index, summary, appendix, or helper documents
+  - README, notes, or examples as files
+
+---
+
+### No Implicit or Helper Files
+
+You MUST NOT:
+
+- Create “helpful” extra documentation
+- Split output across multiple files
+- Generate follow-up or reference documents
+- Create folders unless explicitly required by the prompt
+
+If the prompt does not explicitly authorize file creation, NO FILES MAY BE CREATED.
+
+---
+
+### Overwrite vs Create Behavior
+
+- If the target file already exists:
+  - You MAY update or overwrite it ONLY if the prompt explicitly instructs you to do so.
+- You MUST NOT:
+  - Version files (`prd_v2.md`, `prd-final.md`, etc.)
+  - Create backups or duplicate files
+
+---
+
+### Explicit Prohibition
+
+You MUST NEVER:
+
+- Create files “for clarity”
+- Create files “for completeness”
+- Create files “as an example”
+- Create files unless the prompt explicitly authorizes it
+
+If unsure, default to NO FILE CREATION.
 
 ---
 
